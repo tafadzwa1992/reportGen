@@ -1,0 +1,23 @@
+﻿        static void Main(string[] args)
+        {
+            Console.Write("Wnter no of students");
+            int a = Convert.ToInt32(Console.ReadLine());
+            object[,] names = new object[a,4];
+
+            string[] subjects = new string[] { "shona", "maths","geo"};
+             for(int b=0; b <a; b++)
+            {
+                Console.Write("Enter student name");
+                names[b, 0] = Console.ReadLine();
+                for (int s=0; s < subjects.Length; s++)
+                {
+                    Console.Write("Enter " + subjects[s]);
+                    names[b,s+1] = Convert.ToInt32(Console.ReadLine()); ;
+                   
+                }
+            }
+            //from n in names.AsQueryable()
+            //let total = n[1] + n[2] + n[3]
+            //orderby total
+
+        }
